@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ol > li{
+            width: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            color: orange;
+        }
+        li:hover{
+            color: blue;
+        }
+        input:focus{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        input:enabled{
+            color: blue;
+            font-weight: bold;
+        }
+
+        input:disabled{
+            color: gray;
+        }
+
+
+    </style>
+    <!--li:hover => li에 마우스를 올리면 메뉴가 퍼렁이로 변한다
+    margin : 여백을 주는것 
+    ex) margin : 30px => 주변 30px만큼 떨어짐, 
+    margin : 100 20 50 30 상 우 하 좌 (위에서부터 시계방향 순으로 저만큼 띄어준다)
+    margin : 0 auto (상하는 0만큼 좌우는 브라우저창에 맞춰 중간 값으로 둔다)
+
+    input focus => text 타입 등에 누르면 padding크기만큼 커지고 등
+-->
+
+
+</head>
+<body>
+    <div>
+        <ol>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ol>
+    </div>
+
+    <div>
+        <form action="#">
+            이름 : <input type="text" name="uname"><br>
+            아이디 : <input type="text" name="uid"><br>
+            비밀번호 : <input type="password" name="upw" value="12345" disabled="disabled"><br>
+        </form>
+    </div>
+
+</body>
+</html>
