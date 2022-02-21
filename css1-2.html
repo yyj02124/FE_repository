@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            text-align: center;
+        }
+        
+        #header{
+            width: 500px;
+            background-color: yellow;
+            border: 3px solid black;
+        }
+
+        #wrap{
+            width: 500px;
+            background-color: skyblue;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+
+        #contents{
+            width: 350px;
+            color:black;
+            border: 1px solid green;
+            float: left;
+            
+
+        }
+
+        li{
+            color:darkblue;
+        }
+
+        #banner{
+            width: 140px;
+            float: left;
+            border: 1px solid green;
+        }
+
+        #footer{
+            clear :both;
+            width: 500px;
+            background-color: yellow;
+            border: 3px solid black;
+        }
+
+        .menu1{
+            color: brown;
+        }
+
+        .menu1, .menu3, .menu5{
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        ol li.menu{
+            font-size: 20px;
+            font-weight: bold;
+            color: aliceblue;
+
+        }
+
+    </style>
+    <!--id는 #으로 class는 .으로 설정한다.
+        float:left 정렬에 관한것(공간이 있을때 왼쪽으로 붙힌다.) 
+        이때에 overflow :hidden을 줘야한다
+    clear : float 속성이 밑에까지 침범하는것을 방지-->
+
+</head>
+<body>
+    <div id = header>
+        <h1>HEADER</h1>
+    </div>
+
+    <div id = wrap>
+        <div id = contents>
+            <h2>CONTENT</h2>
+            <ul>
+                <li class = menu1>menu1</li>
+                <li class = menu2>menu2</li>
+                <li class = menu3>menu3</li>
+                <li class = menu4>menu4</li>
+                <li class = menu5>menu5</li>
+            </ul>
+            <ol>
+                <li>menu1</li>
+                <li class = menu>menu2</li>
+                <li>menu3</li>
+                <li class = menu>menu4</li>
+                <li class = menu1>menu5</li>
+            </ol>
+        </div>
+        <div id = banner>
+            <h2>BANNER</h2>
+            <a href="https://www.google.com/" > 
+                <img src="img01.jpg" alt="이미지"> </a>
+        </div>
+    </div>
+
+    <div id = footer>
+        <h1>FOOTER</h1>
+    </div>
+    
+
+</body>
+</html>
