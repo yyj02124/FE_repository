@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>    
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none;}
+        li{list-style: none;}
+
+        header{
+            width: 800px; margin: 0 auto;
+            border: 1px solid #cccccc;
+            font-family: Shizuru;
+        }
+
+        header #gnb{
+            border: 1px solid #cccccc;
+        }
+
+        header #gnb ul{
+            overflow: hidden;
+        }
+
+        header #gnb ul li{
+            float: left;
+            
+        }
+        header #gnb ul li a{padding: 10px 20px;
+            border: 1px solid #cccccc;}
+
+        header #lnb{
+            border: 1px solid #cccccc;
+        }
+
+        header #lnb ul{
+            overflow: hidden;
+        }
+
+        header #lnb ul li{
+            float: right;
+        }
+        header #lnb ul li a{padding: 10px 20px;
+            border: 1px solid #cccccc;
+        }
+
+        #content{width: 800px; margin: 0 auto;
+            border: 1px solid #cccccc;
+            font-family: Redressed;
+        }
+        #content #section{
+            width: 500px;
+            height: 400px;
+            border: 1px solid #cccccc; float: left;
+        }
+        #content #aside{
+            width: 294px;
+            height: 400px;
+            border: 1px solid #cccccc; float: left;
+        }
+
+        footer{
+            clear: both;
+            width: 800px; margin: 0 auto;
+            border: 1px solid #cccccc;
+            font-family: Shizuru;
+        }
+        footer #office{
+            text-align: center;
+            height: 200px;
+            line-height: 200px;
+        }
+        
+
+    </style>
+
+</head>
+<!--구글 폰트 사용 하는 법 =>  구글 사이트를 가서(fonts.google.com)
+    원하는 폰트를 카피해서 가져온다 그후 헤드에 넣고
+    font-family를 바꿔주면 쓸수 있다.
+    네트워크가 되어야지만 사용가능하다.
+-->
+<body>
+    <header>
+        <div id="gnb">
+            <ul>
+                <li><a href="#none">gnb01</a></li>
+                <li><a href="#none">gnb02</a></li>
+                <li><a href="#none">gnb03</a></li>
+                <li><a href="#none">gnb04</a></li>
+                <li><a href="#none">gnb05</a></li>
+            </ul>
+        </div>
+        <div id="lnb">
+            <ul>
+                <li><a href="#none">lnb01</a></li>
+                <li><a href="#none">lnb02</a></li>
+                <li><a href="#none">lnb03</a></li>
+                <li><a href="#none">lnb04</a></li>
+                <li><a href="#none">lnb05</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <div id="section">it is professional blarbalarblar</div>
+        <div id="aside">tit is equipped with a stp motion blar blar blar</div>
+    </div>
+
+    <footer>
+        <div id="office">
+            office information
+        </div>
+    </footer>
+    
+
+</body>
+</html>
