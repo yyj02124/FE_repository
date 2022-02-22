@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+    a{text-decoration: none;}
+    img{ display: block;
+    margin: auto;}
+    
+    #header{
+        background-color: orange;
+        height: 100px;
+    }
+    #header_wrap #logo_wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #toggle{
+        display: none;
+    }
+
+    #gnb_wrap{
+        display: none;
+        border: 10px solid black;
+    }
+    #toggle:checked ~ #wrap > gnb_wrap{display: block;}
+
+    #gnb{
+        display: flex;
+        flex-direction: row;
+    }
+    #gnb div{
+        width: 25%;
+        margin: 10px 20px;
+        justify-content: center;
+        font-size: 1.1em;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+
+
+    #search{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        align-items: flex-end;
+    }
+    #search input{
+        width: 100%;
+        height: 25px;
+        border: 2px solid black;
+    }
+    #search a{
+        border: 2px solid black;
+    }
+
+    #lnb{
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        text-align: center;
+    }
+    #lnb div{
+        width: 16.5%;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid black;
+    }
+    
+    #lnb div a{
+        padding: 2% 42%;
+    }
+
+    
+
+    .row1 {
+        display: flex;
+        
+    }
+    
+
+    .row2 {
+        display: flex;
+    }
+    .row3 {
+        display: flex;
+    }
+
+    #section_contents_02{
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    #section_contents_02 li{
+        border: 1px solid black;
+        margin-top: 2px;
+    }
+
+ 
+
+    </style>
+
+</head>
+<body>
+    <input id="toggle" type="checkbox">
+    <div id="wrap">
+    <header id="header">
+        <div id="header_wrap">
+            <div id="logo_wrap">
+                <label class="left" for="toggle" onclick=""> <img src="#" alt="menu"></label>
+                <a class="logo" href="#none" alt="logo">mobile logo</a>
+                <a class="myinfo" href="#none" alt="myinfo"><img src="#" alt="info"></a>
+            </div>
+        </div>
+
+        <div id = "search">
+            <input type="text">
+            <a href="#none"><img src="#" alt="search.png"></a>
+        </div>
+    </header>
+
+    <div id="gnb_wrap">
+        <div id="gnb">
+            <div><a href="#none">gnb1</a></div>
+            <div><a href="#none">gnb2</a></div>
+            <div><a href="#none">gnb3</a></div>
+            <div><a href="#none">gnb4</a></div>
+            <div><a href="#none">gnb5</a></div>
+            <div><a href="#none">gnb6</a></div>
+            <div><a href="#none">gnb7</a></div>
+            <div><a href="#none">gnb8</a></div>
+        </div>
+    </div>
+
+    <div id="lnb">
+        <div><a href="#none">lnb1</a></div>
+        <div><a href="#none">lnb2</a></div>
+        <div><a href="#none">lnb3</a></div>
+        <div><a href="#none">lnb4</a></div>
+        <div><a href="#none">lnb5</a></div>
+        <div><a href="#none">lnb6</a></div>
+    </div>
+    
+    <section id="section">
+        <div id="section_contents_01">
+            <div class="row1">
+                <img src="pic.jpg" >
+                <img src="pic.jpg" >
+            </div>  
+            <div class="row2">
+                <img src="pic.jpg" >
+                <img src="pic.jpg" >
+            </div> 
+            <div class="row3">
+                <img src="pic.jpg" >
+                <img src="pic.jpg" >
+            </div>           
+        </div>
+
+        <div id="section_contents_02">
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul>         
+        </div>
+
+    </section>
+</div>
+
+</body>
+</html>
