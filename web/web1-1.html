@@ -27,15 +27,14 @@
         display: none;
         border: 10px solid black;
     }
-    #toggle:checked ~ #wrap > gnb_wrap{display: block;}
+    #toggle:checked ~ #wrap > #gnb_wrap{display: block;}
 
     #gnb{
         display: flex;
         flex-direction: row;
     }
     #gnb div{
-        width: 25%;
-        margin: 10px 20px;
+        flex-basis: 25%;
         justify-content: center;
         font-size: 1.1em;
         border: 1px solid black;
@@ -102,6 +101,27 @@
         margin-top: 2px;
     }
 
+    #ad div{
+        height: 200px;
+        margin-top: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    #ad div img{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        
+    }
+    footer{
+        background-color: gainsboro;
+        height: 50px;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 50px;
+    }
+
  
 
     </style>
@@ -109,7 +129,7 @@
 </head>
 <body>
     <input id="toggle" type="checkbox">
-    <div id="wrap">
+<div id="wrap">
     <header id="header">
         <div id="header_wrap">
             <div id="logo_wrap">
@@ -173,7 +193,18 @@
             </ul>         
         </div>
 
+        <div id="ad">
+            <div><img src="picture1.png" alt="ad1"> advertise1</div>
+            <div><img src="picture1.png" alt="ad2"> advertise2</div>
+            <div><img src="picture1.png" alt="ad3"> advertise3</div>
+        </div>
     </section>
+
+    <footer>
+        <div>copyright</div>
+    </footer>
+
+
 </div>
 
 </body>
