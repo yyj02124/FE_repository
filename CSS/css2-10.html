@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #wrap .rec{width: 100px; height: 200px; background-color: red; transition-duration: 2s;}
+        #wrap .rec:hover{width: 200px; height: 100px; background-color: green;}
+        #wrap .rec:active{width: 200px; height: 200px; background-color: blue; border-radius: 100px;}
+
+        #rec{position: absolute; top: 0px; left: 300px; background-color: red; width: 100px; height: 100px;}
+        #rec:hover{ background-color: #ffff00; width: 200px; height: 200px;} 
+
+        #nav #gnb{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #nav #gnb div{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+
+        #nav #gnb .item1:hover{
+            height: 200px; transition-duration: 1s; background-color: khaki;
+        }
+        #nav #gnb .item2:hover{
+            height: 200px; background-color: khaki;
+        }
+        #nav #gnb .item3:hover{
+            height: 200px; transition-duration: 2s; background-color: khaki;
+        }
+        #nav #gnb .item4:hover{
+            height: 200px; transition-duration: 2s; background-color: khaki;
+        }
+        #nav #gnb .item5:hover{
+            height: 200px; transition-duration: 2s; background-color: khaki;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div class="rec"></div>
+    </div>
+
+    <div>
+        <div id="rec"></div>
+    </div>
+
+    <div id="nav">
+        <div id="gnb">
+            <div class="item1">GNB_01</div>
+            <div class="item2">GNB_02</div>
+            <div class="item3">GNB_03</div>
+            <div class="item4">GNB_04</div>
+            <div class="item5">GNB_05</div>
+        </div>
+    </div>
+    
+</body>
+</html>
