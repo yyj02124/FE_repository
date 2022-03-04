@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="sec.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="study.css">
+
 
     <style>
         *{margin: 0; padding: 0; list-style: none; box-sizing: border-box;
         z-index: 0;}
-        a{text-decoration: none;}
-        
+        a{text-decoration: none; color: black;}
+
+        #body_wrap{
+            background-color: rgb(59 130 246/0.02);       
+        }
         header{
             font-size: 2em;
             width: 100%;
@@ -22,9 +28,13 @@
             position: fixed;
             z-index: 100;
             opacity: 1;
-            background-color: rgb(254,254,254);
+            background-color: rgb(255,255,255);
         }
-
+        hr{
+            height: 3px;
+            background: rgb(128, 128, 128);
+            opacity: 0.5;
+        }
         nav{
             border: 1px solid black;
             height: 400px;
@@ -32,49 +42,35 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-        
-
+        }        
         nav ul li{
             border: 1px solid black;
-            height: 30px;
             text-align: center;
-
+            width: 400px;
         }
+
 
         #inform{
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
-
         #inform div{
             margin: 1%;
             border: 1px solid black;
             padding: 2.5px 15px;
             border-radius: 15px;
-
         }
+
         section{
             max-width: 1400px;
             display: grid;
             grid-template-columns: 3fr 1fr;
             border: 1px solid black;
             margin: 2% auto;
-
-
-
+            margin-bottom: 150px;
         }
-        section #sec{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border: 1px dashed black;
-            margin-right: 1%;
-        }
-        section #sec div{
-            border: 1px dashed red;
-            margin: 3%;
-        }
+
         section #box{
             border: 1px dashed red;
             position: sticky;
@@ -88,30 +84,210 @@
         }
 
         section article{
-            height: 3000px;
+            height: 4000px;
             border: 1px dashed blue;
             margin-right: 1%;
         }
+        article .mini_title{
+            background-color: rgb(59 130 246);
+            color: rgb(254,254,254);
+            padding: 0.3%;
+            border-radius: 10px;
+            
+        }
+        article h3{
+            margin: 5px 0;
+            font-size: 1.5em;
+        }
+        article h5{
+            font-size: 1em;
+        }
+        article h5>span{
+            color: rgb(59 130 246);
+        }
+        #why_study{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #why_study .why_study_box{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 1px 3px 0 rgb(128, 128, 128);
+            margin: 5%;
+            justify-content: center;
+            margin-bottom: 15%;
+            border-radius: 5px;
+            background-color: rgb(254,254,254);
+        }
+        #why_study .why_study_box img{
+            width: 70%;
+            height: 70%;
+            margin: 0 auto;
+        }
+        #why_study .why_study_box p{
+            margin: 10%;
+            text-align: center;
+            font-size: 1em;
+        }
+        #hashtag{
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }        
+        article #hashtag span{
+            border: 1px solid rgb(222, 222, 222);
+            background-color: rgb(254,254,254);
+            margin-right: 2%;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 0.3%;
+        }
+        #what_study{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #what_study .what_study_box{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+            margin: 2%;
+            background-color: rgb(59 130 246/0.02);
+        }
+
+        #what_study .what_study_box div{
+            background-color: rgb(254,254,254);
+        }
+        #what_study .what_study_box div>h4{
+            text-align: center;
+            margin: 2% 0;
+        }
+        #what_study .what_study_box span{
+            margin: 2%;
+        }
+
+        #coder #coder_title{
+            display: flex;
+            background-color: rgb(75, 85, 99);
+            padding: 1%;
+            margin-top: 2%;
+        }
+
+        #coder #coder_title .redcircle{
+            background-color: rgb(255,0,0);
+            border-radius: 10px;
+            margin-right: 4px;
+        }
+        #coder #coder_title .yellowcircle{
+            background-color: rgb(255,255,0);
+            border-radius: 10px;
+            margin-right: 4px;
+        }
+        #coder #coder_title .greencircle{
+            background-color: rgb(05,255,0);
+            border-radius: 10px;
+            margin-right: 27%;
+        }
+
+        #coder #coder_title>div>h4{
+            color: rgb(254,254,254);
+            font-weight: bold;
+        }
+
+        #coder #coder_body{
+            background-color: rgb(55,65,81);
+            color: rgb(254,254,254);
+        }
+        #coder #coder_body div{
+            margin: 1% 0;
+        }
+        #coder #coder_body div .text_pink{
+            color: fuchsia;
+        }
+        #coder #coder_body div .text_aqua{
+            color: aqua;
+        }
+
+
+
+        #represent{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+
+        }
+        #represent div{
+            padding: 3% 0;
+            justify-content: space-evenly;
+            font-size: 2em;
+        }
+        #represent .icon0{
+            width: 10%;
+        }
+
+
+
+
+        .check_icon{
+            width: 2%;
+        }
+        #end_study{
+            margin-bottom: 5%;
+        }
+        #end_study h2{
+            margin-bottom: 2%;
+        }
+        #updated{
+            margin-top: 10%;
+        }
+        #updated h2{
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 1%;
+            padding-top: 1%;
+        }
+        #updated .update1 li{
+            list-style: inside;
+            font-size: 1em;
+        }
+        #updated .update2 li{
+            list-style: inside;
+            font-size: 1em;
+        }
+
         
 
+
+
+
+
+
+
+
+
+
+
+
+
+        #section2 .QNA{
+            text-align: center;
+            font-size: 2em;
+            margin: 3%;
+        }
         #section2 #wrap{
-            max-width: 1400px;
+            width: auto;
             height: 300px;
             background-color: rgb(59 130 246/0.1);
-            border: 1px solid blue;
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
-            margin-top: 150px;
+            
+            
         }
-
         #section2 div{
             margin: 5%;
             font-size: 1.5em;
             font-weight: bold;
         }
-
         #section2 div span{
             color: rgb(59 130 246);
         }
@@ -125,25 +301,18 @@
             text-align: center;
             line-height: 38px;
         }
-
         #section2 .bt a{
             color: #e5e7eb;
             font-size: 0.7em;
             padding: 4% 9%;            
         }
 
-        
-
         footer{
             height: 1000px;
             border: 1px solid black;
             margin-top: 70px;
         }
-
-        
-
-        
-        
+       
     </style>
 
 </head>
@@ -152,6 +321,7 @@
     <header>
         <h2>title</h2>
     </header>
+    <div id="body_wrap">
     <nav>
         <ul>
             <li>바닐라 js로 크롬앱 만들기</li>
@@ -164,19 +334,304 @@
     </div>
     <section>
         <div id="sec">
-            <div>sec1</div>
-            <div>sec2</div>
-            <div>sec3</div>
+            <div class="summary">
+                <div class="icon_basic"> <svg class="icon1" fill="rgb(254,254,254)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg> </div>
+                <div class="b1"> 동영상 <h2>60개</h2> </div>
+            </div>
+            <div class="summary">
+                <div class="icon_basic"> <svg class="icon2" fill="rgb(254,254,254)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg> </div>
+                <div class="b1">강의분량 <h2>8 시간</h2></div>
+            </div>
+            <div class="summary">
+                <div class="icon_basic"> <svg class="icon3" fill="rgb(254,254,254)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg> </div>
+                <div class="b1">레벨 <h2>초급</h2></div>
+            </div>
         </div>
         <div id="box">box</div>
    
 
         <article>
+
+            <div>
+                <span class="mini_title">학습효과</span>
+                <h3>실전형 코딩을 시작하세요</h3>
+                <h5>왜 직접 만들면서 배워야. <span class="blue">진짜 지식이 될까요?</span></h5>
+            </div>
+            <div id="why_study">
+                <div class="why_study_box"><img src="https://nomadcoders.co/freeCourse01.svg" alt="none"> <p>우리는 그동안 딱딱한 이론과 문법 중심의 한국식 코딩을 배워왔어요.</p></div>
+                <div class="why_study_box"><img src="https://nomadcoders.co/freeCourse02.svg" alt="none"> <p>이렇게 배운 지식은 현업에서 바로 활용하기 어려워요.</p></div>
+                <div class="why_study_box"><img src="https://nomadcoders.co/freeCourse03.svg" alt="none"> <p>하지만 존재하는 서비스와 기능을 따라만들면서 배우면, 온전히 나의 기술로 습득 할 수 있어요.</p></div>
+            </div>
+            <p>직접 한땀 한땀 코딩하며 성장할수 있는,</p>
+            <p>실전형 코딩으로 빠르게 시작하세요!</p>
+            <div id="hashtag"><span>&#35;클론코딩</span><span>&#35;현업중심</span><span>&#35;자기주도학습</span></div>
+
+            <div>
+                <span class="mini_title">강의 내용</span>
+                <h3>배우고, 직접 구현합니다</h3>
+            </div>
+            <div id="what_study">
+                <div class="what_study_box">
+                    <div><h4>배우는 이론</h4></div>
+                    <hr>
+                    <span> <svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Variables</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Function</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Data Types</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Arrays, Objects</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        DOM Functions</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Events</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        if / else / for</span>
+                </div>
+                <div class="what_study_box">
+                    <div><h4>구현하는 기능</h4></div>
+                    <hr>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        JS Clock</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        JS To Do List</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Get Geolocation</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Get Weather Information</span>
+                    <span><svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Deploy to Github Pages</span>
+                </div>
+            </div>
+
+            <div id="coder">
+                <div id="coder_title">
+                    <div class="redcircle"> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="yellowcircle"> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="greencircle"> &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div> <h4>다음과 같은 패키지를 사용합니다</h4></div>
+                </div>
+                <div id="coder_body">
+                    &nbsp;{
+                    <div>&nbsp;&nbsp;&nbsp;&#34;<span class="text_pink">이름</span>&#34; : &#34; <span class="text_aqua">바닐라 JS로 크롬 앱 만들기</span>&#34;,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&#34;<span class="text_pink">섹션</span>&#34; : &#34; <span class="text_aqua">무엇을 사용하나요??</span>&#34;,</div>
+                    <div>&nbsp;&nbsp;&nbsp;&#34;<span class="text_pink">패키지</span>&#34; : [ </div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">Javascript</span>&#34;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">localStorage</span>&#34;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">AJAX</span>&#34;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">DOM</span>&#34;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">fetch</span>&#34;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;<span class="text_aqua">OpenWeather API</span>&#34; ]</div>
+                    &nbsp;}
+                </div>
+            </div>
+
+            <div id="represent">
+                <div><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="js-square" class="icon0 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="rgb(59,130,246)" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
+                    JavaScript</div>
+                <div><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="html5" class="icon0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="rgb(59,130,246)" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
+                    HTML5</div>
+                <div><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="icon0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="rgb(59,130,246)" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path></svg>
+                    Open Weather API</div>
+            </div>
+
+
             <div>article</div>
+
+            <div id="end_study">
+                <h2>결과적으로, 이 수업 이후...</h2>
+                <div>
+                    <svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">
+                        </path>
+                    </svg> 기초적인 수준이지만 자바스크립트 기본기를 이해한다. 
+                </div>
+
+                <div>
+                    <svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">
+                        </path>
+                    </svg> 자바스크립트로 시계. 할일목록. 날씨등 기본 기능을 구현할 수 있게된다. 
+                </div>
+
+                <div>
+                    <svg fill="rgb(59,130,246)" viewBox="0 0 20 20" class="check_icon">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">
+                        </path>
+                    </svg> 바닐라 자바스크립트를 활용해서 간단한 웹서비스를 만들수 있다.
+                </div>
+            </div>
+
+            <iframe width="640" height="355" src="https://www.youtube.com/embed/yLNuqWCUA8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div id="updated">
+                <h2>2021 UPDATED SUMMARY</h2>
+                <ul class="update1">
+                    <li>총강의수 60개</li>
+                    <li>JS를 활용한</li>
+                    <li>더 친절</li>
+                    <li>무료강의</li>
+                    <li>무료</li>
+                    <li>결과물의 ⭐️ <a href="#none">최종데모</a>  ⭐️</li>
+                    <li> <a href="#none">무료강의 맛보기</a></li>
+                </ul>
+                <hr>
+                <h2>자바스크립트 2주 완성</h2>
+                <ul class="update2">
+                    <li>강의도 100%~</li>
+                    <li>2주컷</li>
+                    <li>니꼬샘</li>
+                    <li>모르는 내용은</li>
+                    <li> <a href="#none"> 2주 바닐라 </a></li>
+                </ul>
+            </div>
+
+            <div id="curriculum_wrap">
+                <div id="curriculum">
+                    <h3>상세 커리큘럼</h3>&nbsp;&nbsp;<span>동영상60개</span>&nbsp;&nbsp;<span>총 8 시간</span>
+                </div>
+                <div id="curriculum_open">전체열기</div>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study1" for="study1">INTRODUCTION<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study1" type="checkbox">
+                <nav id="study_nav1">
+                    <ul>
+                        <li> <a href="#none"> #1.0 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.0 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.1 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.2 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.3 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.4 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.5 무료강의<span>미리보기&#8594;</span> </a></li>
+                        <li> <a href="#none"> #1.6 무료강의<span>미리보기&#8594;</span> </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study2" for="study2">WELCOME TO JAVA<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study2" type="checkbox">
+                <nav id="study_nav2">
+                    <ul style="cursor: not-allowed;">
+                        <li> #2.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.1 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.2 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.3 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.4 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.5 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.6 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.7 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.8 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.9 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.10 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.11 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.12 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.13 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.14 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.15 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #2.16 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study3" for="study3">JAVASCRIPT ON BROWSER<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study3" type="checkbox">
+                <nav id="study_nav3">
+                    <ul style="cursor: not-allowed;">
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study4" for="study4">LOGIN<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study4" type="checkbox">
+                <nav id="study_nav4">
+                    <ul style="cursor: not-allowed;">
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study5" for="study5">CLOCK<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study5" type="checkbox">
+                <nav id="study_nav5">
+                    <ul style="cursor: not-allowed;">
+                        <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study6" for="study6">QUOTES<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study6" type="checkbox">
+                <nav id="study_nav6">
+                    <ul style="cursor: not-allowed;">
+                        <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study7" for="study7">TO DO LIST<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study7" type="checkbox">
+                <nav id="study_nav7">
+                    <ul style="cursor: not-allowed;">
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="study_wrap">
+                <label class="study8" for="study8">WEATHER<span style="margin-right: 7%;">&#129131;</span>  </label>
+                <input id="study8" type="checkbox">
+                <nav id="study_nav8">
+                    <ul style="cursor: not-allowed;">
+                        <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                        <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
+                    </ul>
+                </nav>
+            </div>
+
         </article>
 
         
     </section>
+    </div>
 
     <div id="section2">
         <div id="wrap">
@@ -191,7 +646,9 @@
             </div>
         </div>
 
-        <label class="menu1" for="menu1">수업은 언제 시작하고 종료 되나요</label>
+        <h2 class="QNA">자주하는 질문</h2>
+
+        <label class="menu1" for="menu1">수업은 언제 시작하고 종료 되나요?<span style="margin-right: 7%;">&#129131;</span>  </label>
         <input id="menu1" type="checkbox">
         <nav id="menu_nav1">
             <ul>
@@ -201,7 +658,7 @@
             </ul>
         </nav>
 
-        <label class="menu2" for="menu2">수업은 언제까지 들을 수 있나요?</label>
+        <label class="menu2" for="menu2">수업은 언제까지 들을 수 있나요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu2" type="checkbox">
         <nav id="menu_nav2">
             <ul>
@@ -211,7 +668,7 @@
             </ul>
         </nav>
 
-        <label class="menu3" for="menu3">저에게 이 수업이 어렵지 않을까요?난이도가 어느정도 인가요?</label>
+        <label class="menu3" for="menu3">저에게 이 수업이 어렵지 않을까요?난이도가 어느정도 인가요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu3" type="checkbox">
         <nav id="menu_nav3">
             <ul>
@@ -221,7 +678,7 @@
             </ul>
         </nav>
 
-        <label class="menu4" for="menu4">결제는 어떻게 하나요?</label>
+        <label class="menu4" for="menu4">결제는 어떻게 하나요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu4" type="checkbox">
         <nav id="menu_nav4">
             <ul>
@@ -231,7 +688,7 @@
             </ul>
         </nav>
 
-        <label class="menu5" for="menu5">환불 되나요?</label>
+        <label class="menu5" for="menu5">환불 되나요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu5" type="checkbox">
         <nav id="menu_nav5">
             <ul>
@@ -241,7 +698,7 @@
             </ul>
         </nav>
 
-        <label class="menu6" for="menu6">할인쿠폰은 어디서 얻나요?</label>
+        <label class="menu6" for="menu6">할인쿠폰은 어디서 얻나요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu6" type="checkbox">
         <nav id="menu_nav6">
             <ul>
@@ -251,7 +708,7 @@
             </ul>
         </nav>
 
-        <label class="menu7" for="menu7">챌린지 프로그램이 뭔가요?</label>
+        <label class="menu7" for="menu7">챌린지 프로그램이 뭔가요?<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu7" type="checkbox">
         <nav id="menu_nav7">
             <ul>
@@ -261,7 +718,7 @@
             </ul>
         </nav>
 
-        <label class="menu8" for="menu8">그 외 궁금한게 있어요!</label>
+        <label class="menu8" for="menu8">그 외 궁금한게 있어요!<span style="margin-right: 7%;">&#129131;</span></label>
         <input id="menu8" type="checkbox">
         <nav id="menu_nav8">
             <ul>

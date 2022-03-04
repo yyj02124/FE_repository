@@ -1,19 +1,27 @@
-
         label{
             width: 800px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             margin: 0 auto;
             cursor: pointer;
+            font-size: 1.5em;
+            justify-content: space-between;
+            padding: 1%;
         }
         #section2>nav{
             border: 0;
             height: auto;
         }
+        li{
+            font-size: 1.3em;
+            padding: 1%;
+        }
+        
+        
         
 
         .menu1{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu1{
             display: none;
@@ -25,7 +33,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
             
         }
@@ -34,7 +42,7 @@
         }
 
         .menu2{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu2{
             display: none;
@@ -46,7 +54,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu2:checked + nav#menu_nav2{
@@ -54,7 +62,7 @@
         }
 
         .menu3{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu3{
             display: none;
@@ -66,7 +74,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu3:checked + nav#menu_nav3{
@@ -74,7 +82,7 @@
         }
 
         .menu4{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu4{
             display: none;
@@ -86,7 +94,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu4:checked + nav#menu_nav4{
@@ -94,7 +102,7 @@
         }
 
         .menu5{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu5{
             display: none;
@@ -106,7 +114,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu5:checked + nav#menu_nav5{
@@ -114,7 +122,7 @@
         }
         
         .menu6{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu6{
             display: none;
@@ -126,7 +134,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu6:checked + nav#menu_nav6{
@@ -134,7 +142,7 @@
         }
 
         .menu7{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu7{
             display: none;
@@ -146,7 +154,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu7:checked + nav#menu_nav7{
@@ -154,7 +162,7 @@
         }
 
         .menu8{
-            border: 1px solid black;
+            border-top: 1px solid black;
         }
         #menu8{
             display: none;
@@ -166,7 +174,7 @@
             width: 800px;
             height: auto;
             margin: 0 auto;
-            border: 1px dashed black;
+            border: 0;
             text-align: left;
         }
         input#menu8:checked + nav#menu_nav8{
