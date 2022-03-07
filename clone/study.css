@@ -5,7 +5,7 @@ article nav{
 
 article #study_wrap{
     margin-bottom: 25px;
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(59 130 246/0.001);
 }
 
 #curriculum_wrap{
@@ -70,7 +70,7 @@ article #study_wrap{
 #study_nav1 ul li span:hover{
     background-color: rgb(59 130 246/0.75);
 }        
-input#study1:checked + nav#study_nav1{
+input#study1:checked + div#study_nav1{
     display: block;
 }
 
@@ -107,7 +107,7 @@ input#study1:checked + nav#study_nav1{
     color: #808080;
     border-radius: 5px;
 }        
-input#study2:checked + nav#study_nav2{
+input#study2:checked + div#study_nav2{
     display: block;
 }
 #study_nav2 ul li{
@@ -148,7 +148,7 @@ input#study2:checked + nav#study_nav2{
     color: #808080;
     border-radius: 5px;
 }        
-input#study3:checked + nav#study_nav3{
+input#study3:checked + div#study_nav3{
     display: block;
 }
 #study_nav3 ul li{
@@ -188,7 +188,7 @@ input#study3:checked + nav#study_nav3{
     color: #808080;
     border-radius: 5px;
 }        
-input#study4:checked + nav#study_nav4{
+input#study4:checked + div#study_nav4{
     display: block;
 }
 #study_nav4 ul li{
@@ -228,7 +228,7 @@ input#study4:checked + nav#study_nav4{
     color: #808080;
     border-radius: 5px;
 }        
-input#study5:checked + nav#study_nav5{
+input#study5:checked + div#study_nav5{
     display: block;
 }
 #study_nav5 ul li{
@@ -268,7 +268,7 @@ input#study5:checked + nav#study_nav5{
     color: #808080;
     border-radius: 5px;
 }        
-input#study6:checked + nav#study_nav6{
+input#study6:checked + div#study_nav6{
     display: block;
 }
 #study_nav6 ul li{
@@ -308,7 +308,7 @@ input#study6:checked + nav#study_nav6{
     color: #808080;
     border-radius: 5px;
 }        
-input#study7:checked + nav#study_nav7{
+input#study7:checked + div#study_nav7{
     display: block;
 }
 #study_nav7 ul li{
@@ -348,9 +348,16 @@ input#study7:checked + nav#study_nav7{
     color: #808080;
     border-radius: 5px;
 }        
-input#study8:checked + nav#study_nav8{
+input#study8:checked + div#study_nav8{
     display: block;
 }
 #study_nav8 ul li{
     color: #808080;
 } 
+
+#study_wrap div{
+    background-color: rgb(59 130 246/0.001);
+}
+#study_wrap label{
+    background-color: rgb(256,256,256);
+}

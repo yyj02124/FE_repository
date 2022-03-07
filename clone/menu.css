@@ -8,12 +8,12 @@
             justify-content: space-between;
             padding: 1%;
         }
+        
         #section2>nav{
             border: 0;
             height: auto;
         }
         li{
-            font-size: 1.3em;
             padding: 1%;
         }
         

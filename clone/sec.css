@@ -1,7 +1,6 @@
 section #sec{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 1px dashed black;
     margin-right: 1%;            
 }
 section #sec .summary{

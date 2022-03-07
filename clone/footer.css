@@ -1,0 +1,70 @@
+footer{
+    margin: 0 auto;;
+    width: 1400px;
+    height: 300px;
+    margin-top: 150px;
+}
+footer #footer_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;            
+}
+footer #footer_grid #nomadcoders>.nomadcoders_title{
+    color: rgb(128, 128, 128);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+footer #footer_grid #nomadcoders{
+    font-size: 0.8em;
+}
+footer #navi_legal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#navi_legal .nomadcoders_title{
+    display: flex;
+    flex-direction: column;
+    color: rgb(128, 128, 128);
+
+}
+#navi_legal .nomadcoders_title a{
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+#footer_grid #nomadimg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#footer_grid #nomadimg img{
+    width: 30%;
+}
+footer #copywrite{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#copywrite .copywrite{
+    color: rgb(128, 128, 128);
+}
+#copywrite .site{
+    display: flex;
+    flex-direction: row;
+}
+#copywrite .site .site_icon1{
+    width: 40px !important;
+    margin-right: 30px;
+}
+#copywrite .site .insta{
+    width: 100%;
+}
+#copywrite .site .youtube{
+    width: 100%; 
+}
+#copywrite .site .facebook{
+    width: 100%;   
+}
+#copywrite .site .github{
+    width: 100%;
+}

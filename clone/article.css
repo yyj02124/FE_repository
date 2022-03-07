@@ -1,0 +1,165 @@
+section article{
+    height: 4600px;
+    margin-right: 1%;
+}
+article .mini_title{
+    background-color: rgb(59 130 246);
+    color: rgb(254,254,254);
+    padding: 0.3%;
+    border-radius: 10px;            
+}
+article h3{
+    margin: 5px 0;
+    font-size: 1.5em;
+}
+article h5{
+    font-size: 1em;
+}
+article h5>span{
+    color: rgb(59 130 246);
+}
+#why_study{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#why_study .why_study_box{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 rgb(128, 128, 128);
+    margin: 5%;
+    justify-content: center;
+    margin-bottom: 15%;
+    border-radius: 5px;
+    background-color: rgb(254,254,254);
+}
+#why_study .why_study_box img{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+#why_study .why_study_box p{
+    margin: 10%;
+    text-align: center;
+    font-size: 1em;
+}
+#hashtag{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}        
+article #hashtag span{
+    border: 1px solid rgb(222, 222, 222);
+    background-color: rgb(254,254,254);
+    margin-right: 2%;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.3%;
+}
+#what_study{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#what_study .what_study_box{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+    margin: 2%;
+    background-color: rgb(59 130 246/0.02);
+}
+
+#what_study .what_study_box div{
+    background-color: rgb(254,254,254);
+}
+#what_study .what_study_box div>h4{
+    text-align: center;
+    margin: 2% 0;
+}
+#what_study .what_study_box span{
+    margin: 2%;
+}
+
+#coder #coder_title{
+    display: flex;
+    background-color: rgb(75, 85, 99);
+    padding: 1%;
+    margin-top: 2%;
+}
+
+#coder #coder_title .redcircle{
+    background-color: rgb(255,0,0);
+    border-radius: 10px;
+    margin-right: 4px;
+}
+#coder #coder_title .yellowcircle{
+    background-color: rgb(255,255,0);
+    border-radius: 10px;
+    margin-right: 4px;
+}
+#coder #coder_title .greencircle{
+    background-color: rgb(05,255,0);
+    border-radius: 10px;
+    margin-right: 27%;
+}
+
+#coder #coder_title>div>h4{
+    color: rgb(254,254,254);
+    font-weight: bold;
+}
+
+#coder #coder_body{
+    background-color: rgb(55,65,81);
+    color: rgb(254,254,254);
+}
+#coder #coder_body div{
+    margin: 1% 0;
+}
+#coder #coder_body div .text_pink{
+    color: fuchsia;
+}
+#coder #coder_body div .text_aqua{
+    color: aqua;
+}
+#represent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+
+}
+#represent div{
+    padding: 3% 0;
+    justify-content: space-evenly;
+    font-size: 2em;
+    background-color: rgb(254,254,254);
+}
+#represent .icon0{
+    width: 10%;
+}
+#roadmap{
+    margin-top: 3%;
+}
+#roadmap .icon0{
+    width: 5%;
+}
+#roadmap .wrap_roadmap{
+    margin-top: 20px;
+    box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+    display: flex;
+    background-color: rgb(254,254,254);
+}
+#roadmap .roadmap{
+    height: 100px;
+    margin: 2% 0;
+    margin-left: 3%;
+    width: 100%;
+    font-size: 1.2em;   
+}
+#roadmap .roadmap>p{
+    margin-top: 2%;
+    line-height: -50%;
+}
+#roadmap .roadmap a{
+    float: right;
+    margin-right: 3%;
+    color: rgb(59 130 246);
+    font-weight: bold;
+}

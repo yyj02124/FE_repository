@@ -6,231 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+
+    
+
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="article.css">
+    <link rel="stylesheet" type="text/css" href="review.css">
+    <link rel="stylesheet" type="text/css" href="box.css">
     <link rel="stylesheet" type="text/css" href="sec.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="study.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
 
 
     <style>
+        @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
         *{margin: 0; padding: 0; list-style: none; box-sizing: border-box;
-        z-index: 0;}
+        z-index: 0;  font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
         a{text-decoration: none; color: black;}
 
         #body_wrap{
             background-color: rgb(59 130 246/0.02);       
         }
-        header{
-            font-size: 2em;
-            width: 100%;
-            font-weight: bold;
-            text-align: center;
-            box-shadow:0 0 2px 0;
-            position: fixed;
-            z-index: 100;
-            opacity: 1;
-            background-color: rgb(255,255,255);
-        }
+
+
+
+
         hr{
             height: 3px;
             background: rgb(128, 128, 128);
             opacity: 0.5;
         }
-        nav{
-            border: 1px solid black;
+        #nav_div{
             height: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }        
-        nav ul li{
-            border: 1px solid black;
-            text-align: center;
-            width: 400px;
+            background: #FDC830;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FDC830, #F37335);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FDC830, #F37335); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+        #nav_color{
+            height: 210px;
+            background: #FDC830;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FDC830, #F37335);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FDC830, #F37335); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            transform: skewY(-5deg);
+            margin-top: -140px;
+            z-index: 10;
         }
+        #nav_div ul{
+            z-index: 70;
+        }
+
+        #nav_div ul li{
+            transform: none;
+            text-align: center;
+            width: 800px;
+            
+        }
+
+        #nav_div ul .nav_title{
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        #nav_div ul>.nav_sub_tite{
+            text-align: center;
+            font-size: 1.8em;
+        }
+
 
 
         #inform{
             display: flex;
             flex-direction: row;
             justify-content: center;
+            margin-top: -20px;
         }
-        #inform div{
+        #inform #inform_element{
             margin: 1%;
-            border: 1px solid black;
             padding: 2.5px 15px;
             border-radius: 15px;
+            background-color: #F5ECCE;
+            color : #B18904;
+            font-weight: bold;
+        }
+        #inform #inform_free{
+            margin: 1%;
+            padding: 2.5px 15px;
+            border-radius: 15px;
+            background-color: #FFFFFF;
+            color : rgb(59 130 246);
+            font-weight: bold;
         }
 
         section{
+            z-index: 50;
             max-width: 1400px;
             display: grid;
             grid-template-columns: 3fr 1fr;
-            border: 1px solid black;
             margin: 2% auto;
             margin-bottom: 150px;
         }
 
-        section #box{
-            border: 1px dashed red;
-            position: sticky;
-            top: 12%;
-            margin-top: -200px;
-            margin-bottom: -100px;
-            margin-left: 1%;
-            margin-right: 2%;
-            z-index: 50;
-            background-color: rgb(254,254,254);
-        }
-
-        section article{
-            height: 4000px;
-            border: 1px dashed blue;
-            margin-right: 1%;
-        }
-        article .mini_title{
-            background-color: rgb(59 130 246);
-            color: rgb(254,254,254);
-            padding: 0.3%;
-            border-radius: 10px;
-            
-        }
-        article h3{
-            margin: 5px 0;
-            font-size: 1.5em;
-        }
-        article h5{
-            font-size: 1em;
-        }
-        article h5>span{
-            color: rgb(59 130 246);
-        }
-        #why_study{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        #why_study .why_study_box{
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 1px 3px 0 rgb(128, 128, 128);
-            margin: 5%;
-            justify-content: center;
-            margin-bottom: 15%;
-            border-radius: 5px;
-            background-color: rgb(254,254,254);
-        }
-        #why_study .why_study_box img{
-            width: 70%;
-            height: 70%;
-            margin: 0 auto;
-        }
-        #why_study .why_study_box p{
-            margin: 10%;
-            text-align: center;
-            font-size: 1em;
-        }
-        #hashtag{
-            margin-top: 2%;
-            margin-bottom: 2%;
-        }        
-        article #hashtag span{
-            border: 1px solid rgb(222, 222, 222);
-            background-color: rgb(254,254,254);
-            margin-right: 2%;
-            border-radius: 5px;
-            font-weight: bold;
-            padding: 0.3%;
-        }
-        #what_study{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        #what_study .what_study_box{
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
-            margin: 2%;
-            background-color: rgb(59 130 246/0.02);
-        }
-
-        #what_study .what_study_box div{
-            background-color: rgb(254,254,254);
-        }
-        #what_study .what_study_box div>h4{
-            text-align: center;
-            margin: 2% 0;
-        }
-        #what_study .what_study_box span{
-            margin: 2%;
-        }
-
-        #coder #coder_title{
-            display: flex;
-            background-color: rgb(75, 85, 99);
-            padding: 1%;
-            margin-top: 2%;
-        }
-
-        #coder #coder_title .redcircle{
-            background-color: rgb(255,0,0);
-            border-radius: 10px;
-            margin-right: 4px;
-        }
-        #coder #coder_title .yellowcircle{
-            background-color: rgb(255,255,0);
-            border-radius: 10px;
-            margin-right: 4px;
-        }
-        #coder #coder_title .greencircle{
-            background-color: rgb(05,255,0);
-            border-radius: 10px;
-            margin-right: 27%;
-        }
-
-        #coder #coder_title>div>h4{
-            color: rgb(254,254,254);
-            font-weight: bold;
-        }
-
-        #coder #coder_body{
-            background-color: rgb(55,65,81);
-            color: rgb(254,254,254);
-        }
-        #coder #coder_body div{
-            margin: 1% 0;
-        }
-        #coder #coder_body div .text_pink{
-            color: fuchsia;
-        }
-        #coder #coder_body div .text_aqua{
-            color: aqua;
-        }
-
-
-
-        #represent{
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
-
-        }
-        #represent div{
-            padding: 3% 0;
-            justify-content: space-evenly;
-            font-size: 2em;
-        }
-        #represent .icon0{
-            width: 10%;
-        }
-
-
-
-
+        
         .check_icon{
             width: 2%;
         }
         #end_study{
+            margin-top: 10%;
             margin-bottom: 5%;
         }
         #end_study h2{
@@ -256,17 +143,6 @@
         
 
 
-
-
-
-
-
-
-
-
-
-
-
         #section2 .QNA{
             text-align: center;
             font-size: 2em;
@@ -280,8 +156,6 @@
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
-            
-            
         }
         #section2 div{
             margin: 5%;
@@ -306,12 +180,13 @@
             font-size: 0.7em;
             padding: 4% 9%;            
         }
+        #section2 .bt:hover{
+            background-color: rgb(59 130 246/0.5);
 
-        footer{
-            height: 1000px;
-            border: 1px solid black;
-            margin-top: 70px;
         }
+
+
+        
        
     </style>
 
@@ -319,18 +194,45 @@
 <body>
 
     <header>
-        <h2>title</h2>
+        <div id="headerwrap">
+            <a href="#"><img src="https://nomadcoders.co/m.svg" alt="#"></a>
+            <div id="header_menu">
+                <div><a href="#Course">Course</a></div>
+                <div><a href="#Course">Challenges</a></div>
+                <div><a href="#Course">Community</a></div>
+                <div><a href="#Course">FAQ</a></div>
+                <div><a href="#Course">Roadmap</a></div>
+            </div>
+            <div id="header_login">
+                <div class="Login"><a href="#login"> Login</a></div>
+                <a href="#join">Join</a>
+            </div>
+        </div>
+
+        <div id="title_right_bt">
+            <img src="https://cf.channel.io/pub-file/9053/61ea814429a53bc09a4b/_.png" alt="#none" width="80%" height="80%">
+        </div>
+
     </header>
+    
+    <div id="title_left_bt">
+        <a href="#">&#8593;</a>
+    </div>
+
     <div id="body_wrap">
-    <nav>
+    <div id="nav_div">
         <ul>
-            <li>바닐라 js로 크롬앱 만들기</li>
-            <li>menu3</li>
+            <li class="nav_title">바닐라 JS로 크롬앱 만들기</li>
+            <li class="nav_sub_tite">Javascript for Begginers</li>
         </ul>
-    </nav>
+    </div>
+
+    <div id="nav_color">
+    </div>
+
     <div id="inform">
-        <div>초급</div>
-        <div>무료</div>
+        <div id="inform_element">초급</div>
+        <div id="inform_free">무료</div>
     </div>
     <section>
         <div id="sec">
@@ -347,7 +249,38 @@
                 <div class="b1">레벨 <h2>초급</h2></div>
             </div>
         </div>
-        <div id="box">box</div>
+        <div id="box">
+            <span class="box_element">초급</span><span class="box_free">#무료강의</span>
+            <div id="box_wrap">
+                <div id="box_level">
+                    <p id="box_title1"><svg fill="rgb(128,128,128)" viewBox="0 0 20 20" class="box_check_icon">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">
+                        </path>
+                    </svg>
+                        수강난이도</p>
+                    <br>
+                    <p>초급기본. HTML,CSS,JS 이해 필요</p>
+                </div>
+                <br>
+                <div>
+                    <p class="box_title2"> <svg fill="rgb(128,128,128)" viewBox="0 0 20 20" class="box_check_icon">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">
+                        </path>
+                    </svg>
+                        구현하는 기능</p>
+                    <br>
+                    <p>JS Clock</p>
+                    <p>JS To Do List</p>
+                    <p>Get Geolocation</p>
+                    <p>Get Weather Information</p>
+                    <p>Deploy to Github Pages</p>
+                    <p class="box_end">그 외 다수...</p>
+                </div>
+            </div>
+            <div id="box_button">
+                <a href="#free">무료 수강하기</a>
+            </div>
+        </div>
    
 
         <article>
@@ -436,8 +369,70 @@
                     Open Weather API</div>
             </div>
 
+            <div id="roadmap">
+                <span class="mini_title">로드맵</span>
+                <h3>이 정도 수준인 분들 드루와요</h3>
+                <h5>기본적인 HTML, CSS, JS에 대한 이해도가 있는 분들이 수강하실 수 있습니다</h5>
+                <div class="wrap_roadmap">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="html5" class="icon0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" color="#F1652A"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="css3-alt" class="icon0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" color="#409AD6"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
+                    <div class="roadmap">
+                        <p>
+                        초급 이상의 <strong>HTML. CSS</strong>이해도가 필요합니다
+                        <br>
+                        왕초보분들은 <strong>선수 강의</strong>로 시작하세요!
+                        
+                        <a href="#HTML,CSS">HTML,CSS강의 보러가기&#129046;</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <div>article</div>
+            <div id="review">
+                <div class="review_title">
+                    <h3>수강생 후기</h3>
+                </div>
+                <div class="review_arrow">
+                    <span>&#8592;</span><span>&#8594;</span>
+                </div>
+                
+            </div>
+            <div id="review_grid">
+                <div id="student_review">
+                    <svg class="talk_icon" fill="rgb(59,130,246)" xmlns="http://www.w3.org/2000/svg"><path d="M4.4 15.52C6.28 15.52 7.6 14.24 7.6 12.16C7.6 10.24 6.12 9.08 4.4 9.08C4.24 9.08 4.12 9.08 3.96 9.12C3.96 6.56 5.28 4.84 7.88 3.44L6.52 0.839998C2.52 2.92 0.52 6 0.52 10.08C0.52 13.52 1.88 15.52 4.4 15.52ZM14.4 15.52C16.24 15.52 17.6 14.24 17.6 12.16C17.6 10.24 16.12 9.08 14.4 9.08C14.24 9.08 14.12 9.08 13.96 9.12C13.96 6.56 15.28 4.84 17.88 3.44L16.52 0.839998C12.52 2.92 10.52 6 10.52 10.08C10.52 13.52 11.88 15.52 14.4 15.52Z"></path></svg>
+                    <p>학생들의 후기를 적는 곳입니다.</p>
+                </div>
+                <div id="student_review">
+                    <div id="student_review">
+                        <svg class="talk_icon" fill="rgb(59,130,246)" xmlns="http://www.w3.org/2000/svg"><path d="M4.4 15.52C6.28 15.52 7.6 14.24 7.6 12.16C7.6 10.24 6.12 9.08 4.4 9.08C4.24 9.08 4.12 9.08 3.96 9.12C3.96 6.56 5.28 4.84 7.88 3.44L6.52 0.839998C2.52 2.92 0.52 6 0.52 10.08C0.52 13.52 1.88 15.52 4.4 15.52ZM14.4 15.52C16.24 15.52 17.6 14.24 17.6 12.16C17.6 10.24 16.12 9.08 14.4 9.08C14.24 9.08 14.12 9.08 13.96 9.12C13.96 6.56 15.28 4.84 17.88 3.44L16.52 0.839998C12.52 2.92 10.52 6 10.52 10.08C10.52 13.52 11.88 15.52 14.4 15.52Z"></path></svg>
+                        <p>학생들의 후기를 적는 곳입니다.</p>
+                    </div>
+                </div>
+                <div id="student_review">
+                    <div id="student_review">
+                        <svg class="talk_icon" fill="rgb(59,130,246)" xmlns="http://www.w3.org/2000/svg"><path d="M4.4 15.52C6.28 15.52 7.6 14.24 7.6 12.16C7.6 10.24 6.12 9.08 4.4 9.08C4.24 9.08 4.12 9.08 3.96 9.12C3.96 6.56 5.28 4.84 7.88 3.44L6.52 0.839998C2.52 2.92 0.52 6 0.52 10.08C0.52 13.52 1.88 15.52 4.4 15.52ZM14.4 15.52C16.24 15.52 17.6 14.24 17.6 12.16C17.6 10.24 16.12 9.08 14.4 9.08C14.24 9.08 14.12 9.08 13.96 9.12C13.96 6.56 15.28 4.84 17.88 3.44L16.52 0.839998C12.52 2.92 10.52 6 10.52 10.08C10.52 13.52 11.88 15.52 14.4 15.52Z"></path></svg>
+                        <p>학생들의 후기를 적는 곳입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="review_grid">
+                <div id="talk_box1"></div>
+                <div id="talk_box1"></div>
+                <div id="talk_box1"></div>
+            </div>
+            <div id="review_grid">
+                <div id="talk_user1"><img src="https://d1telmomo28umc.cloudfront.net/media/public/avatars/jihyeoneexx-avatar.jpg" alt="" style="width: 20%;"> username1</div>
+                <div id="talk_user1"><img src="https://d1telmomo28umc.cloudfront.net/media/public/avatars/jihyeoneexx-avatar.jpg" alt="" style="width: 20%;"> username1</div>
+                <div id="talk_user1"><img src="https://d1telmomo28umc.cloudfront.net/media/public/avatars/jihyeoneexx-avatar.jpg" alt="" style="width: 20%;"> username1</div>
+            </div>
+            
+
+
+
+
+
+
+            
 
             <div id="end_study">
                 <h2>결과적으로, 이 수업 이후...</h2>
@@ -468,22 +463,22 @@
             <div id="updated">
                 <h2>2021 UPDATED SUMMARY</h2>
                 <ul class="update1">
-                    <li>총강의수 60개</li>
-                    <li>JS를 활용한</li>
-                    <li>더 친절</li>
-                    <li>무료강의</li>
-                    <li>무료</li>
-                    <li>결과물의 ⭐️ <a href="#none">최종데모</a>  ⭐️</li>
+                    <li>총 강의수: 60개 (8시간!!!)</li>
+                    <li>JS를 활용한 왕 기초적인 프론트엔드 빌드 배우고 + 결과물 까지!</li>
+                    <li>더 친절하고. 더 자세한 설명으로 2021년 업데이트 되었어요!</li>
+                    <li>무료 강의도 업데이트 해주는 것은 무엇? #노마진코더</li>
+                    <li>네! 맞아요! 게다가 무료입니다!!</li>
+                    <li>결과물의 ⭐️ <a href="#none">최종데모</a>  ⭐️ 를 살펴보세요.</li>
                     <li> <a href="#none">무료강의 맛보기</a></li>
                 </ul>
                 <hr>
                 <h2>자바스크립트 2주 완성</h2>
                 <ul class="update2">
-                    <li>강의도 100%~</li>
-                    <li>2주컷</li>
-                    <li>니꼬샘</li>
-                    <li>모르는 내용은</li>
-                    <li> <a href="#none"> 2주 바닐라 </a></li>
+                    <li>강의도 100% 완료하고, 10% 할인쿠폰도 받을 수 있는 기회!</li>
+                    <li>2주 안에 JS를 뿌셔버릴 수 있는 학습 스케쥴표를 제공!</li>
+                    <li>니꼬샘이 직접 제작한 퀴즈, 코딩 과제를 하면서 진짜 내 지식으로 만드세요.</li>
+                    <li>모르는 내용은 개발자 수만여명이 모인 노마드 커뮤니티에서 실시간으로 물어보면서 해결할 수 있어요.</li>
+                    <li> <a href="#none"> 2주 바닐라JS 완성반 알아보기 </a></li>
                 </ul>
             </div>
 
@@ -497,7 +492,7 @@
             <div id="study_wrap">
                 <label class="study1" for="study1">INTRODUCTION<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study1" type="checkbox">
-                <nav id="study_nav1">
+                <div id="study_nav1">
                     <ul>
                         <li> <a href="#none"> #1.0 무료강의<span>미리보기&#8594;</span> </a></li>
                         <li> <a href="#none"> #1.0 무료강의<span>미리보기&#8594;</span> </a></li>
@@ -508,13 +503,13 @@
                         <li> <a href="#none"> #1.5 무료강의<span>미리보기&#8594;</span> </a></li>
                         <li> <a href="#none"> #1.6 무료강의<span>미리보기&#8594;</span> </a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study2" for="study2">WELCOME TO JAVA<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study2" type="checkbox">
-                <nav id="study_nav2">
+                <div id="study_nav2">
                     <ul style="cursor: not-allowed;">
                         <li> #2.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #2.1 무료강의&#128274;<span>수강하기&#8594;</span> </li>
@@ -534,13 +529,13 @@
                         <li> #2.15 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #2.16 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study3" for="study3">JAVASCRIPT ON BROWSER<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study3" type="checkbox">
-                <nav id="study_nav3">
+                <div id="study_nav3">
                     <ul style="cursor: not-allowed;">
                         <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
@@ -552,13 +547,13 @@
                         <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #3.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study4" for="study4">LOGIN<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study4" type="checkbox">
-                <nav id="study_nav4">
+                <div id="study_nav4">
                     <ul style="cursor: not-allowed;">
                         <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
@@ -569,38 +564,38 @@
                         <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #4.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study5" for="study5">CLOCK<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study5" type="checkbox">
-                <nav id="study_nav5">
+                <div id="study_nav5">
                     <ul style="cursor: not-allowed;">
                         <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #5.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study6" for="study6">QUOTES<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study6" type="checkbox">
-                <nav id="study_nav6">
+                <div id="study_nav6">
                     <ul style="cursor: not-allowed;">
                         <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #6.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study7" for="study7">TO DO LIST<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study7" type="checkbox">
-                <nav id="study_nav7">
+                <div id="study_nav7">
                     <ul style="cursor: not-allowed;">
                         <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
@@ -612,19 +607,19 @@
                         <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #7.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
             <div id="study_wrap">
                 <label class="study8" for="study8">WEATHER<span style="margin-right: 7%;">&#129131;</span>  </label>
                 <input id="study8" type="checkbox">
-                <nav id="study_nav8">
+                <div id="study_nav8">
                     <ul style="cursor: not-allowed;">
                         <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                         <li> #8.0 무료강의&#128274;<span>수강하기&#8594;</span> </li>
                     </ul>
-                </nav>
+                </div>
             </div>
 
         </article>
@@ -731,7 +726,75 @@
     </div>
     
     <footer>
-        copywrite
+        <div id="footer_grid">
+            <div id="nomadcoders">
+                <div class="nomadcoders_title">NOMAD CODERS</div>
+                <br>
+                <p>유한회사 노마드컴퍼니</p>
+                <p>대표: 박인</p>
+                <p>개인정보책임관리자: 박인</p>
+                <p>사업자번호: 301-88-01666</p>
+                <p>주소: 서울시 마포구 양화로 8길 17-28, 6층 141호</p>
+                <p>-</p>
+                <p>원격평생교육원: 서울시 서부교육지원청(제2020-13호)</p>
+                <p>통신판매업 신고번호: 2020-서울마포-1987</p>
+                <p>이메일: help [@] nomadcoders.co</p>
+            </div>
+            <div id="navi_legal">
+                <div class="nomadcoders_title">
+                    <p>NAVIATION</p>
+                    <a href="#NAVI">Course</a>
+                    <a href="#NAVI">Challenges</a>
+                    <a href="#NAVI">Community</a>
+                    <a href="#NAVI">FAQ</a>
+                    <a href="#NAVI">Roadmap</a>
+                </div>
+                <div class="nomadcoders_title">
+                    <p>LEGAL</p>
+                    <a href="#LEGAL">이용약관</a>
+                    <a href="#LEGAL">개인정보취급방침</a>
+                    <a href="#LEGAL">취소 환불정책</a>
+                </div>
+            </div>
+            <div id="nomadimg">
+                <img src="https://nomadcoders.co/m-gray.svg" alt="#none">
+                <p>Clone Startups. Learn to Code.</p>
+            </div>
+        </div>
+        
+        <hr>
+        <div id="copywrite">
+            <div class="copywrite">
+                © 2017-2022 Nomad Coders. All rights reserved.
+            </div>
+            <div class="site">
+                <div class="site_icon1">
+                    <a href="https://www.instagram.com/nomad_coders/">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="insta" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="rgb(128,128,128)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg> 
+                    </a>
+                </div>
+                <div class="site_icon1">
+                    <a href="https://www.youtube.com/channel/UCUpJs89fSBXNolQGOYKn0YQ">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="rgb(128,128,128)" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+                    </a>
+                </div>
+                <div class="site_icon1">
+                    <a href="https://www.facebook.com/nomadcoders">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="rgb(128,128,128)" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg>
+                    </a>
+                </div>
+                <div class="site_icon1">
+                    <a href="https://github.com/serranoarevalo">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="rgb(128,128,128)" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
     </footer>
     
 </body>
