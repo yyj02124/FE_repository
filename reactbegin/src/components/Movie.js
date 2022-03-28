@@ -23,7 +23,7 @@ function Movie({ id, mediumCoverImage, title, summary, genres, year, rating }) {
 
 Movie.propTypes = {
   id: PropTypes.number.isRequired,
-  mediumCoverImage: PropTypes.string.apply.isRequired,
+  // mediumCoverImage: PropTypes.string.apply.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
