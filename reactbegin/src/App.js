@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
-import { Hooks } from "./routes/HookUseState2";
+import { Hooks } from "./Hooks/HookUseState2";
 
 function App() {
   return (
