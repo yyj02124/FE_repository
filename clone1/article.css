@@ -1,0 +1,351 @@
+section {
+  z-index: 50;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 2% auto;
+  margin-bottom: 150px;
+}
+
+section article {
+  min-height: 4600px;
+  margin-right: 1%;
+}
+article .miniTitle {
+  background-color: rgb(59 130 246);
+  color: rgb(254, 254, 254);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+article h3 {
+  margin: 5px 0;
+  font-size: 30px;
+}
+article h5 {
+  font-size: 1em;
+}
+article h5 > span {
+  color: rgb(59 130 246);
+}
+#whyStudy {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 50px;
+}
+#whyStudy .whyStudyBox {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px 0 rgb(128, 128, 128);
+  justify-content: center;
+  margin-bottom: 15%;
+  border-radius: 5px;
+  background-color: rgb(254, 254, 254);
+  padding-top: 30px;
+}
+
+#whyStudy .whyStudyBox:nth-child(1) {
+  margin-right: 20px;
+}
+#whyStudy .whyStudyBox:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#whyStudy .whyStudyBox:nth-child(3) {
+  margin-left: 20px;
+}
+
+#whyStudy .whyStudyBox img {
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+#whyStudy .whyStudyBox p {
+  margin: 10%;
+  text-align: center;
+  font-size: 1em;
+}
+#hashtag {
+  margin-top: 2%;
+  margin-bottom: 150px;
+}
+article #hashtag span {
+  border: 1px solid rgb(222, 222, 222);
+  background-color: rgb(254, 254, 254);
+  margin-right: 2%;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.3%;
+}
+#whatStudy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+#whatStudy .whatStudyBox {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+  background-color: rgb(249, 250, 251);
+}
+
+#whatStudy .whatStudyBox:nth-child(1) {
+  margin-right: 15px;
+}
+#whatStudy .whatStudyBox:nth-child(2) {
+  margin-left: 15px;
+}
+
+#whatStudy .whatStudyBox div {
+  background-color: rgb(254, 254, 254);
+}
+#whatStudy .whatStudyBox div > h4 {
+  text-align: center;
+  margin: 2% 0;
+}
+#whatStudy .whatStudyBox span {
+  margin: 2%;
+}
+
+#coderTitle {
+  display: flex;
+  background-color: rgb(75, 85, 99);
+  padding: 1%;
+  margin-top: 2%;
+}
+
+#coderTitle .redcircle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#coderTitle .yellowcircle {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 0);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#coderTitle .greencircle {
+  background-color: rgb(05, 255, 0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#coderTitle > div > h4 {
+  color: rgb(254, 254, 254);
+  font-weight: bold;
+}
+
+#coderBody {
+  background-color: rgb(55, 65, 81);
+  color: rgb(254, 254, 254);
+}
+#coderBody div {
+  margin: 1% 0;
+}
+#coderBody div .textPink {
+  color: fuchsia;
+}
+#coderBody div .textAqua {
+  color: aqua;
+}
+#represent {
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+  background-color: rgb(254, 254, 254);
+}
+#represent .representMenu {
+  text-align: centers;
+  align-content: center;
+  margin: 0 auto;
+  padding: 3% 0;
+  font-size: 25px;
+  background-color: rgb(254, 254, 254);
+}
+
+#represent .icon0 {
+  width: 25px !important;
+  height: 25px !important;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+#roadmap {
+  margin-top: 150px;
+}
+#roadmap .icon0 {
+  width: 5% !important;
+  margin-left: 50px !important;
+  margin-right: 5px !important;
+}
+#roadmap .wrapRoadmap {
+  margin-top: 20px;
+  box-shadow: 0 3px 5px 0 rgb(128, 128, 128);
+  display: flex;
+  background-color: rgb(254, 254, 254);
+}
+#roadmap .roadmap {
+  height: 100px;
+  margin: 2% 0;
+  margin-left: 3%;
+  width: 100%;
+  font-size: 1.2em;
+}
+#roadmap .roadmap > p {
+  margin-top: 2%;
+  line-height: -50%;
+}
+#roadmap .roadmap a {
+  float: right;
+  margin-right: 3%;
+  color: rgb(59 130 246);
+  font-weight: bold;
+}
+
+#review {
+  width: 800px;
+  height: 54px;
+  margin-top: 100px;
+  display: inline-flex;
+  line-height: 54px;
+}
+#review .reviewArrow {
+  width: 400px;
+  margin: 5px;
+  font-size: 2em;
+  display: flex;
+  justify-content: right;
+  line-height: 35px;
+}
+.reviewArrow span {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#reviewGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#reviewGrid .studentReview {
+  max-width: 326.5px;
+  height: 400px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 20px 15px -3px rgb(128, 128, 128),
+    0 20px 15px -3px rgb(222, 222, 222);
+  z-index: 30;
+}
+#reviewGrid .studentReview:nth-child(1) {
+  margin-right: 20px;
+}
+#reviewGrid .studentReview:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#reviewGrid .studentReview:nth-child(3) {
+  margin-left: 20px;
+}
+#reviewGrid .studentReview .quote-icon {
+  margin-bottom: 30px;
+}
+
+#reviewGrid .talkBox1,
+.talkBox2,
+.talkBox3 {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(-45deg);
+  margin-top: -43px;
+  z-index: 40;
+}
+
+#reviewGrid .talkBox1 {
+  margin-right: 20px;
+}
+#reviewGrid .talkBox2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#reviewGrid .talkBox3 {
+  margin-left: 20px;
+}
+
+#wrapReviewUsername {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+#wrapReviewUsername .talkUser1,
+.talkUser2,
+.talkUser3 {
+  display: flex;
+  align-items: center;
+  width: 326.5px;
+}
+
+#wrapReviewUsername .talkUser1 a,
+.talkUser2 a,
+.talkUser3 a {
+  color: rgb(59 130 246);
+  text-decoration: underline;
+}
+
+#wrapReviewUsername .talkUser1 img,
+.talkUser2 img,
+.talkUser3 img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#wrapReviewUsername .talkUser1 {
+  margin-right: 20px;
+}
+#wrapReviewUsername .talkUser2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#wrapReviewUsername .talkUser3 {
+  margin-left: 20px;
+}
+
+.checkIcon {
+  width: 2%;
+}
+#endStudy {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#endStudy h2 {
+  margin-bottom: 2%;
+}
+#updated {
+  margin-top: 10%;
+}
+#updated a {
+  color: rgb(59, 130, 246);
+  text-decoration: underline;
+}
+#updated h2 {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+#updated .update1 li {
+  list-style: inside;
+  font-size: 1em;
+}
+#updated .update2 li {
+  list-style: inside;
+  font-size: 1em;
+}

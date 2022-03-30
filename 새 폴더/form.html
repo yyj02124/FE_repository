@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title></title>
+</head>
+
+<body>
+    <form action="#" method="get"><!--action은 어떠한 서식을 눌렀을때
+         그 다음으로 이동하는 곳 / get은 정보를 다 보여주고, post가 따로 있는데
+        post는 정보를 은닉시켜준다. 디폴트는 겟방식-->
+        이름 : <input type="text" name="uname" > <br>
+        아이디 : <input type="text" name="uid"><br>
+        비밀번호 : <input type="password" name="upw"><br>
+        <!--type이 텍스트면 글자가 나타나고, 패스워드면 동그란 점자가 나온다.-->
+        연락처 : <input type="text" name="uphone1" size="5"> - 
+        <input type="text" name="uphone2" size="5"> - 
+        <input type="text" name="uphone3" size="5"> <br>
+        사진 : <input type="file" name="upic" > <br>
+        <!--타입이 파일이면 버튼이생기고 누르면 윈도우 탐색기가 열림-->
+        성별구분 :  <input type="radio" name="gender" value="m">남,
+        <input type="radio" name="gender" value="w">여<br>
+        사용언어 :<input type="checkbox" name="lan" value="kor" checked="check"> 한글,
+        <input type="checkbox" name="lan" value="eng" checked="check"> 영어,
+        <input type="checkbox" name="lan" value="jap" checked="check"> 일어<br>
+        <!--radio는 n개중에 1개 고를 때 쓰며,  name은 같고 value를 다르게쓴다
+        checkbox는 n개중 n개를 고를 떄 쓴다.-->
+        자기소개: <textarea rows="5" cols="20"> 간단히 입력하세요</textarea><br>
+        국적: <select>
+            <option>KOREA</option>
+            <option>USA</option>
+            <option>JAPAN</option>
+        </select><br>
+        좋아하는 음식 : <select multiple="multiple">
+            <option>김치</option>
+            <option>불고기</option>
+            <option>파전</option>
+            <option>비빔밥</option>
+        </select>
+        <!--셀렉ㅌ는 고르는거 , 국적은 하나만 골라야하니 뭘 할수 없지만, 
+            음식은 여러개를 좋아할수 있기에 multiple을 넣어 려러개를 고르게 할수맀다.. -->
+        <input type="submit">
+        <!--제출버튼, 누르면 맨처음 form action으로 간다.-->    
+
+
+    </form>
+
+</body>
+
+</html>

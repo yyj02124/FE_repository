@@ -1,0 +1,6 @@
+git add "파일명" / .(모든파일)
+git commit ~(코밋 달기)
+git status
+git push origin master(올리기)
+
+블로그 1-3까지 함.

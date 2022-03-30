@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .container{
+            display: flex;
+            border: 1px solid red;
+           /* flex-direction: row;
+            flex-wrap: wrap-reverse;*/
+            flex-flow: row wrap;
+           /* justify-content:center;*/
+           
+        }
+        .container .item{
+            border: 1px solid black;
+            flex-basis: 200px;
+            width: 200px;
+            flex-shrink: 1;
+        }
+
+        #nav{
+            display:flex ;
+            flex: none;
+            border: 1px solid black;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: lavenderblush;
+        }
+
+        #nav .test li{
+            list-style: none;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: white;
+            margin: 10px;
+            box-shadow: 2px 3px 5px 0px gainsboro;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">helloflex</div>
+        <div class="item">abc</div>
+        <div class="item">flexhello</div>
+        <div class="item">abcdefghijklmnopqrstuvwxyz</div>       
+    </div>
+
+    <div id="nav">
+        <ul class="test">
+            <li>aaaaa</li>
+            <li>bbbbbbbbbbb</li>
+            <li>ccc</li>
+        </ul>
+    </div>
+
+</body>
+</html>

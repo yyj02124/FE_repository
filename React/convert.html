@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function MinuteToHours() {
+      const [minutes, setMinutes] = React.useState(0); //minutes는 숫자를 받아서 연산 실행(초기값은 0)
+      const [flipped, setFlipped] = React.useState(false); //여기서flipped는 boolean이다.
+      const onChange = (event) => {
+        setMinutes(event.target.value);
+      }; //JS를 통해 변화가 일어났는지 탐지, 변화가 일어날떄마다 rerender 해준다
+      const reset = () => setMinutes(0); // setMinutes을 0으로 초기화 해준다
+      const onFlip = () => {
+        reset();
+        setFlipped((current) => !current); //현재의 value가 반대로 나오게 된다,current가 true면 false로 false면 true로
+      }; //즉, fliped버튼을 눌렀을때 0으로 초기화 해주며, flipped가 발생한다
+      return (
+        <div>
+          <div>
+            <label htmlFor="minutes">Minutes</label>
+            <input
+              value={flipped ? minutes * 60 : minutes}
+              id="minutes"
+              placeholder="Minutes" //박스 안 표식
+              type="number"
+              onChange={onChange}
+              disabled={flipped}
+            />
+          </div>
+          <div>
+            <label htmlFor="hours">Hours</label>
+            <input
+              value={flipped ? minutes : Math.round(minutes / 60)}
+              id="hours"
+              placeholder="Hours"
+              type="number"
+              onChange={onChange}
+              disabled={!flipped}
+            />
+          </div>
+          <button onClick={reset}>Reset</button>
+          <button onClick={onFlip}>{flipped ? "Turn back" : "Invert"}</button>
+        </div>
+      );
+    }
+
+    function KmToMiles() {
+      const [distance, setDistance] = React.useState(0);
+      const [convert, setconvert] = React.useState(false);
+
+      const onChange = (event) => {
+        setDistance(event.target.value);
+      };
+      const reset = () => setDistance(0);
+      const flip = () => {
+        reset();
+        setconvert((current) => !current);
+      };
+
+      return (
+        <div>
+          <div>
+            <label htmlFor="kilometers">Kilometers</label>
+            <input
+              value={convert ? distance * 1.6 : null}
+              id="kilometers"
+              placeholder="KM" //박스 안 표식
+              type="number"
+              onChange={onChange}
+              disabled={convert}
+            />
+          </div>
+          <div>
+            <label htmlFor="miles">MILES</label>
+            <input
+              value={convert ? null : distance * 0.625}
+              id="miles"
+              placeholder="MI"
+              type="number"
+              onChange={onChange}
+              disabled={!convert}
+            />
+          </div>
+          <button onClick={reset}>Reset</button>
+          <button onClick={flip}>{convert ? "gotoKM" : "gotoMI"}</button>
+        </div>
+      );
+    }
+
+    function App() {
+      const [index, setIndex] = React.useState("0");
+      const onSelect = (event) => {
+        setIndex(event.target.value);
+      };
+      return (
+        <div>
+          <h1 className="hi">Super Convert</h1>
+          <select value={index} onChange={onSelect}>
+            <option value="0">-------------------</option>
+            <option value="1">Minutes & Hours</option>
+            <option value="2">Km & Miles</option>
+          </select>
+          <hr />
+          {index === "0" ? "Please select your menu" : null}
+          {index === "1" ? <MinuteToHours /> : null}
+          {index === "2" ? <KmToMiles /> : null}
+        </div> //자바스크립트 사용 if else 대신 삼항연산자 사용
+      );
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
